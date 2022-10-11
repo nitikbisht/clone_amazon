@@ -9,6 +9,11 @@
         * {
           box-sizing: border-box;
         }
+        #completeNavbar{
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
         body{
             background-color: rgba(0, 0, 0, 0.712);
         }
@@ -157,10 +162,33 @@
             height: 55px;
             width: 70px;
         }
+        #miniNavbar{
+            display: flex;
+            flex-direction: row;
+            margin: 0 -8px 0 -8px;
+            background-color: rgba(11, 11, 52, 0.475);
+            height: 40px;
+        }
+        #leftSide{
+            display: flex;
+            width: 65%;
+            flex-direction: row;
+            justify-content: space-around;
+            height: 40px;
+            margin: auto;
+        }
+        #leftSide > a{
+            color: white;
+            font-size: medium;
+        }
+        #rightSide{
+            width: 35%;
+        }
     </style>
 </head>
 <body>
     <nav>
+        <div id="completeNavbar">
         <div id="navbar">
             <div id="logo">
                 <a href="./index.html">
@@ -216,6 +244,23 @@
                 </div></a>
             </div>
         </div>
+
+        <div id="miniNavbar">
+            <div id="leftSide">
+                <a href=""><p><i class="fa-solid fa-bars"></i> All</p></a>
+                <a href=""><p>Sell</p></a>
+                <a href=""><p>Fresh</p></a>
+                <a href=""><p>Amazon Pay</p></a>
+                <a href=""><p>Today's Deals</p></a>
+                <a href=""><p>Mobiles</p></a>
+                <a href=""><p>Best Sellers</p></a>
+                <a href=""><p>Prime</p></a>
+                <a href=""><p>Buy Again</p></a>
+                <a href=""><p>Customer Service</p></a>
+            </div>
+            <div id="rightSide"></div>
+        </div>
+    </div>
     </nav>
 </body>
 </html>
