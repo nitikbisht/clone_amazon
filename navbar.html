@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazon.in : amazon.com</title>
+    <style>
+        * {
+          box-sizing: border-box;
+        }
+        body{
+            background-color: rgba(0, 0, 0, 0.712);
+        }
+        #navbar{
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            background-color: black;
+            height:60px;
+            margin: -8px;
+        }
+        #logo{
+            width: 12%;
+        }
+        #address{
+            display: flex;
+            flex-direction: row;
+            width: 13%;
+            color: white;
+            
+        }
+        .location{
+            margin-top: 25px;
+            margin-right: 5px;
+        }
+        .locationText>  p{
+            font-size: small;
+            font-family: Arial, Helvetica, sans-serif;
+            color: lightgrey;
+        }
+        .locationText > h4{
+            margin: 0px;
+            margin-top: -14px;
+        }
+        #searchbar{
+            width: 44%;
+            display: flex;
+            flex-direction: row;
+            margin: auto;
+        }
+        #rest{
+            display: flex;
+            flex-direction: row;
+            width: 28%;
+            justify-content: space-between;
+            margin: auto;
+        }
+        #logo > a > img{
+            width: 80%;
+            margin: auto;
+            margin-left: 10px;
+            height: 60px;
+        }
+        #searchbar > select{
+            width: 10%;
+            border: none;
+            background-color: rgb(237, 235, 235);
+            color: rgba(9, 9, 9, 0.626);
+            border-radius: 5px 0 0 5px;
+            height: 40px;
+        }
+        #search{
+            width: 82%;
+            padding: 10px;
+            font-size: 17px;
+            border: none;
+            outline: none;
+            color: #000;
+            height: 40px;
+        }
+        #handleSubmit{
+            width: 8%;
+            padding: 7px 10px 10px 0;
+            color: #000;
+            font-size: 17px;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            background-color: rgb(211, 158, 58);
+            height: 40px;
+        }
+        #handleSubmit > img{
+            width: 27px;
+            height: 27px;
+            margin: 0 0 4px 8px;
+        }
+        #handleSubmit:hover{
+            background-color: rgb(208, 143, 21);
+        }
+        .language > img{
+            width: 22px;
+            height: 17px;
+            margin-top: 20px;
+        }
+        .language > select{
+            width: 16px;
+            margin: auto;
+            color: rgb(117, 116, 116);
+            background-color: black;
+            margin-top: 8px;
+            border: none;
+        }
+        a{
+            text-decoration: none;
+        }
+        #signIn{
+            margin-bottom: 10px;
+        }
+        #signIn > p{
+            font-size: small;
+            font-family: Arial, Helvetica, sans-serif;
+            color: lightgrey;
+        }
+        #signIn > h4{
+            margin: 0px;
+            color: white;
+            margin-top: -14px;
+        }
+        .order{
+            margin-bottom: 10px;
+            margin-left: 10px;
+        }
+        .order > p{
+            font-size: small;
+            font-family: Arial, Helvetica, sans-serif;
+            color: lightgrey;
+        }
+        .order > h4{
+            margin: 0px;
+            color: white;
+            margin-top: -14px;
+        }
+        i{
+            color: white;
+        }
+        #cart{
+            display: flex;
+            flex-direction: row;
+            height: 60px;
+        }
+        #cart > h5{
+            color: white;
+            font-size: large;
+            margin-left: -10px;
+        }
+        #cart > img{
+            height: 55px;
+            width: 70px;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div id="navbar">
+            <div id="logo">
+                <a href="./index.html">
+                <img src="https://www.scottandirmamusic.com/buttons/button.amazon.png" alt="logo">
+            </a>
+            </div>
+            <div id="address">
+                <div class="location"><i class="fa-sharp fa-solid fa-location-dot"></i></div>
+                <div class="locationText">
+                    <p>Hello</p>
+                    <h4>Select your address</h4>
+                </div>
+            </div>
+            <div id="searchbar">
+                <select>
+                    <option value="default">All</option>
+                    <option>Mens wear</option>
+                    <option>Womens wear</option>
+                    <option>Kids wear</option>
+                    <option>Mobiles</option>
+                    <option>Laptops</option>
+                </select>
+                <input id="search" type="search" value="amazon.com">
+                <button type="submit" id="handleSubmit" ><img src="https://www.1stopdesign.com/wp-content/uploads/2015/06/Search-Logos.png"></button>
+            </div>
+            <div id="rest">
+                <div class="language">
+                    <img src = "https://th.bing.com/th/id/R.38750413a87e39bf24401b22da5f07b8?rik=49PKK6jTDyjYDQ&riu=http%3a%2f%2f1.bp.blogspot.com%2f_vSFcTZyvWMU%2fTT3rdd7UdZI%2fAAAAAAAAAZg%2febAKONpvGfw%2fs1600%2fIndia_flag.gif&ehk=mhw1keL6tZhThug47Ae%2bKcfCWuHHeNQk8ttjbQ3%2fU8A%3d&risl=&pid=ImgRaw&r=0" alt = image>
+                    <select>
+                        <option value="default"></option>
+                        <option>English</option>
+                        <option>Hindi</option>
+                        <option>Marathi</option>
+                        <option>Telugu</option>
+                        <option>Malyalam</option>
+                        <option>Tamil</option>
+                    </select>
+                </div>
+                <a href="./index.html">
+                <div id="signIn">
+                    <p>Hello, sign in</p>
+                    <h4>Account & Lists</h4>
+                </div></a>
+                <a href="./index.html">
+                <div class="order">
+                    <p>Returns</p>
+                    <h4>& Orders</h4>
+                </div></a>
+                <a href="./index.html">
+                <div id="cart">
+                    <img src ="https://lynaperez.vip/wp-content/uploads/2020/09/shop2_bl.png">
+                    <h5>Cart</h5>
+                </div></a>
+            </div>
+        </div>
+    </nav>
+</body>
+</html>
+<script src="https://kit.fontawesome.com/d822390a31.js" crossorigin="anonymous"></script>
