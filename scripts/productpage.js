@@ -61,12 +61,32 @@ function displaydetail(el){
     tax.style.marginLeft="50%"
     div2.append(mrp,div22,end,save,tax)
     let div3=document.createElement("div")
+    div3.style.display="flex"
     let div31=document.createElement("div")
+    let img1=document.createElement("img")
+    img1.src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-cod._CB485937110_.png"
+    let p1=document.createElement("p")
+    p1.innerText="Pay on Delivery"
     let div32=document.createElement("div")
+    let img2=document.createElement("img")
+    img2.src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/trust_icon_free_shipping_81px._CB630870460_.png"
+    let p2=document.createElement("p")
+    p2.innerText="Free Delivery"
     let div33=document.createElement("div")
+    let img3=document.createElement("img")
+    img3.src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-returns._CB484059092_.png"
+    let p3=document.createElement("p")
+    p3.innerText="30 Days Returns & Exchange"
     let div34=document.createElement("div")
+    let img4=document.createElement("img")
+    img4.src="https://m.media-amazon.com/images/G/31/A2I-Convert/mobile/IconFarm/icon-amazon-delivered._CB485933725_.png"
+    let p4=document.createElement("p")
+    p4.innerText="Amazon Delivered"
+    div31.append(img1,p1)
+    div32.append(img2,p2)
+    div33.append(img3,p3)
+    div34.append(img4,p4)
     div3.append(div31,div32,div33,div34)
-    let div4=document.createElement("div")
     document.getElementById("pricediv").append(div1,div2,div3)
 }
 let getfun=async()=>{
