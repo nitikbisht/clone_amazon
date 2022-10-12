@@ -17,6 +17,14 @@ function appenddata(data){
         }
     })
 }
+document.getElementById("womens").addEventListener("click",()=>{
+    localStorage.setItem("category","women")
+    location.href="./women.html"
+})
+document.getElementById("mens").addEventListener("click",()=>{
+    localStorage.setItem("category","men")
+    location.href="./men.html"
+})
 function displaydata(el){
     let div=document.createElement("div")
             let imgdiv=document.createElement("div")

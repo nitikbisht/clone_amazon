@@ -65,3 +65,84 @@ img:hover{
 #brands>div>img{
     width: 30%;
 }
+
+
+#dropDown {
+    display: flex;
+    width: 65%;
+    margin: auto;
+    /* height: 210px; */
+    /* border: 1px solid navy; */
+    justify-content: space-between;
+    background-color: white;
+    z-index:1000;
+    padding: 10px;
+    height: 350px;
+
+}
+
+#dropDown>div {
+    width: 20%;
+    /* height: 400px; */
+    /* border: 1px dashed mediumvioletred; */
+
+}
+
+#dropDown p {
+    font-family: 'Prompt', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 15px;
+    color: #282c3f;
+    margin: 3px;
+}
+#dropDown p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+#dropDown{
+    display: none;
+    position: absolute;
+    right: 240px;
+    top: 75px;
+  }
+  
+  #dropDown1 {
+    display: flex;
+    display: none;
+    width: 65%;
+    margin: auto;
+    /* height: 210px; */
+    /* border: 1px solid navy; */
+    justify-content: space-between;
+    background-color: white;
+    z-index:1000;
+    padding: 10px;
+    height: 350px;
+
+}
+
+#dropDown1>div {
+    width: 20%;
+    /* height: 400px; */
+    /* border: 1px dashed mediumvioletred; */
+
+}
+
+#dropDown1 p {
+    font-family: 'Prompt', sans-serif;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 15px;
+    color: #282c3f;
+    margin: 3px;
+}
+#dropDown1 p:hover {
+    cursor: pointer;
+    text-decoration: underline;
+}
+#dropDown1{
+    display: none;
+    position: absolute;
+    right: 240px;
+    top: 75px;
+  }
+  
