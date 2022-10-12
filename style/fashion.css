@@ -108,7 +108,6 @@ img:hover{
   
   #dropDown1 {
     display: flex;
-    display: none;
     width: 65%;
     margin: auto;
     /* height: 210px; */

@@ -2,7 +2,7 @@ import navbar2 from "../components/navbar2.js";
 document.getElementById("navbar2").innerHTML=navbar2();
 import fetchdata from "../components/fetchdata.js";
 
-
+localStorage.setItem("showid","")
 let category=localStorage.getItem("category");
 let getfun=async()=>{
     var data=await fetchdata;
@@ -27,6 +27,10 @@ document.getElementById("mens").addEventListener("click",()=>{
 })
 function displaydata(el){
     let div=document.createElement("div")
+    div.addEventListener("click",()=>{
+        localStorage.setItem("showid",el.id)
+        location.href="./productpage.html"
+    })
             let imgdiv=document.createElement("div")
             let img=document.createElement("img")
             img.src=el.img
