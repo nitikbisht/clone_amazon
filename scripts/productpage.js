@@ -20,8 +20,54 @@ function display(data){
     document.getElementById("imgdiv").append(img)
     let p=document.createElement("p")
     p.innerText=data.description
-    console.log(data.description)
+    // console.log(data.description)
     document.getElementById("adddescription").append(p)
+    displaydetail(data)
+}
+function displaydetail(el){
+    let div=document.createElement("div")
+    let div1=document.createElement("div")
+    let head=document.createElement("h1")
+    head.innerText=`${el.brand} ${el.title}`
+    let div11 = document.createElement("div")
+    div11.style.display = "flex"
+    let rating = document.createElement("p")
+    rating.innerText = `${el.rating.rate} out of 5`
+    let count = document.createElement("p")
+    count.innerText = el.rating.count + " reviews";
+    count.style.color = "#007185"
+    div11.append(rating, count);
+    div1.append(head,div11);
+    let div2=document.createElement("div")
+    let mrp = document.createElement("p")
+    mrp.innerText=`M.R.P : ₹${el.price}`
+    mrp.style.textDecoration = "line-through"
+    let div22=document.createElement("div")
+    div22.style.display="flex"
+    let deal = document.createElement("p")
+    deal.innerText="Deal of the Day : "
+    let op = document.createElement("h4")
+    op.innerText=`₹${el.discPrice}`
+    div22.append(deal,op)
+    let end = document.createElement("p")
+    end.innerText="Ends in 10 days"
+    end.style.marginLeft="50%"
+    let save = document.createElement("p")
+    let dif=+el.price-el.discPrice
+    // console.log(dif)
+    save.innerText=`You Save: ₹${dif} (${el.discount}% off)`
+    let tax = document.createElement("p")
+    tax.innerText="Inclusive of all taxes"
+    tax.style.marginLeft="50%"
+    div2.append(mrp,div22,end,save,tax)
+    let div3=document.createElement("div")
+    let div31=document.createElement("div")
+    let div32=document.createElement("div")
+    let div33=document.createElement("div")
+    let div34=document.createElement("div")
+    div3.append(div31,div32,div33,div34)
+    let div4=document.createElement("div")
+    document.getElementById("pricediv").append(div1,div2,div3)
 }
 let getfun=async()=>{
     var data=await fetchdata;
@@ -79,7 +125,7 @@ function displaydata1(el){
     let oprice = document.createElement("p")
     oprice.innerText = `₹${el.price}`
     oprice.style.textDecoration = "line-through"
-    let price = document.createElement("h4")
+    let price = document.createElement("h3")
     price.innerText = `₹${el.discPrice}`
     let disper = document.createElement("p")
     disper.innerText = `(${el.discount}% off)`
