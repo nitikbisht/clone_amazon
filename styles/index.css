@@ -1,14 +1,19 @@
 
+#landing-main-body{
+    background-color: #EAEDED;
+}
 #navbar{
     height: 90px;
     border: 1px solid black;
     margin: 0;
     padding: 0;
     width: 100%;
+    background-color: aliceblue;
 }
 #landing-carousel-body{
     width: 88%;
     margin: auto;
+    cursor: pointer;
 }
 #landingbody{
     width: 85%;
@@ -62,6 +67,7 @@
     display: grid;
     grid-template-rows: 50px 250px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
 }
 .landing-offer-zone{
     margin-top: 50px;
@@ -69,6 +75,7 @@
     grid-template-rows: 50px 200px;
     padding: 0px 0px 20px 0px;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
 }
 #landing-blockDeals h3,.landing-offer-zone h3,.landing-browsing-history h2{
     margin-left: 20px;
@@ -91,6 +98,7 @@ a:active, a:hover{
     border: 1px solid black;
     display: grid;
     grid-template-columns: repeat(6,16%);
+    
     justify-content: space-around;
 }
 
@@ -115,6 +123,7 @@ a:active, a:hover{
     height: 180px;
     width: 100%;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+    background-color: white;
 }
 .landing-browsing-history > div:nth-child(2){
     height: 130px;
@@ -139,13 +148,28 @@ a:active, a:hover{
     font-weight: bold;
     margin-bottom: 10px;
 }
-
+.landing-noemi{
+    margin-top: 50px;
+    height: 350px;
+    background-color: white;
+    text-align: center;
+    padding: 20px;
+}
+.landing-noemi img{
+    height: 100%;
+    width: 80%;
+    cursor: pointer;
+}
+.landing-noemi img:hover{
+    transform: scale(1.005);
+}
 
 
 
 
 
 #landing-footer{
-
-    margin-bottom: 500px;
+    border: 1px dashed black;
+    background-color: #EAEDED;
+    height: 600px;
 }
