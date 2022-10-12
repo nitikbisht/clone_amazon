@@ -86,7 +86,7 @@
     text-align: center;
 }
 #cartdiv{
-    width: 30%;
+    width: 35%;
     height: 100%;
     border: 1px solid rgb(192, 192, 192);
 }
@@ -117,6 +117,11 @@
 }
 #pricediv>div:nth-child(3)>div{
     width: 25%;
+    text-align: center;
+}
+#pricediv>div:nth-child(3)>div:hover{
+    cursor: pointer;
+    color: #B12704;
 }
 #pricediv>div:nth-child(3) img{
     width: 55px;
