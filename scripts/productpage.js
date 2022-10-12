@@ -10,6 +10,18 @@ async function getinfo(){
     let res=await fetch(url);
     let data1=await res.json();
     console.log("data",data1);
+    display(data1)
+}
+function display(data){
+    document.getElementById("adddescription").innerText=""
+    document.getElementById("imgdiv").innerText=""
+    let img=document.createElement("img")
+    img.src=data.img
+    document.getElementById("imgdiv").append(img)
+    let p=document.createElement("p")
+    p.innerText=data.description
+    console.log(data.description)
+    document.getElementById("adddescription").append(p)
 }
 let getfun=async()=>{
     var data=await fetchdata;
@@ -18,17 +30,21 @@ let getfun=async()=>{
 }
 getfun();
 function appenddata(data){
-    
+    document.getElementById("relateddiv1").innerText=""
     data.map((el)=>{
         if(category=="men"){
             if(el.category==="men's clothing"&& el.id!=id){
                 //displaydata(el);
+                
                 displaydata1(el);
                 //console.log(el);
             }
         }
         else if(category=="women"){
-            //displaydata(el);
+            if(el.category==="women's clothing"&& el.id!=id){
+                displaydata1(el);
+                // console.log(el);
+            }
         }
         
     })
@@ -36,6 +52,10 @@ function appenddata(data){
 
 function displaydata1(el){
     let div = document.createElement("div")
+    div.addEventListener("click",()=>{
+        localStorage.setItem("showid",el.id)
+        location.href="./productpage.html"
+    })
     let imgdiv = document.createElement("div")
     let img = document.createElement("img")
     img.src = el.img

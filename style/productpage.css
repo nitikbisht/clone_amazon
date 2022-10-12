@@ -1,33 +1,14 @@
 #related{
     display: grid;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
 }
-#relateddiv{
-    display: grid;
-    grid-template-columns: repeat(7,1fr);
-    gap: 5px;
-    
-
+#adddescription{
+    border-bottom: 0.5px solid grey;
 }
-#relateddiv>div{
-    border: 1px solid grey;
-    width: 100%;
-    overflow: hidden;
-    text-align: center;
+#description{
+    padding: 3px;
+    /* box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px; */
 }
-#relateddiv h4{
-    font-size: x-large;
-    color: #B12704;
-}
-#relateddiv>div *{
-    justify-content: center;
-    text-align: center;
-    margin: 5px;
-}
-#relateddiv>div img{
-    height: 300px;
-    width: 100%;
-}
-
 
 #relateddiv1{
     display: grid;
@@ -54,4 +35,14 @@
 #relateddiv1>div img{
     height: 300px;
     width: 100%;
+}
+#mainpage{
+    display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+}
+#mainpage>div{
+    width: 50%;
+}
+#adddescription{
+    padding-left: 15px;    
 }
