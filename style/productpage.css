@@ -1,5 +1,57 @@
 #related{
     display: grid;
-    grid-template-columns: repeat(6,1fr);
+}
+#relateddiv{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
     gap: 5px;
+    
+
+}
+#relateddiv>div{
+    border: 1px solid grey;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+#relateddiv h4{
+    font-size: x-large;
+    color: #B12704;
+}
+#relateddiv>div *{
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+}
+#relateddiv>div img{
+    height: 300px;
+    width: 100%;
+}
+
+
+#relateddiv1{
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    gap: 5px;
+    
+
+}
+#relateddiv1>div{
+    border: 1px solid grey;
+    width: 100%;
+    overflow: hidden;
+    text-align: center;
+}
+#relateddiv1 h4{
+    font-size: x-large;
+    color: #B12704;
+}
+#relateddiv1>div *{
+    justify-content: center;
+    text-align: center;
+    margin: 5px;
+}
+#relateddiv1>div img{
+    height: 300px;
+    width: 100%;
 }
