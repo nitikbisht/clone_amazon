@@ -12,7 +12,7 @@ let getfun=async()=>{
 getfun();
 function appenddata(data){
     data.map((el)=>{
-        if(el.category==="men's clothing"){
+        if(el.category==="women's clothing"){
             displaydata(el);
         }
     })
