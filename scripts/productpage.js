@@ -18,7 +18,7 @@ function appenddata(data){
             }
         }
         else if(category=="women"){
-            displaydata(el);
+            //displaydata(el);
         }
         
     })
