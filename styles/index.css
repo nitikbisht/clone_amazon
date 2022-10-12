@@ -94,16 +94,32 @@ a:active, a:hover{
 }
 #landing-blockDeals-grid,.landing-offer-grid{
     padding: 0px 20px 0px 20px;
-    border: 1px solid black;
     display: grid;
-    grid-template-columns: repeat(6,16%);
-    
+    grid-template-columns: repeat(6,16%);    
     justify-content: space-around;
 }
-
+#landing-blockDeals-grid>div{
+    display: grid;
+    grid-template-rows: 70% 10% 10%;
+    text-align: center;
+    font-size: 12px;
+}
+.blockdeals-img img{
+    height: 100%;
+}
+.block-offer{    
+    width: fit-content;
+    background-color: darkred;
+    padding: 5px;
+    text-align: left;
+    color: white;
+}
+#landing-blockDeals-grid >div>div:first-child{
+    padding: 8px;
+    background-color: #EAEDED;
+}
 #landing-blockDeals-grid>div, .landing-offer-grid>div{
     height: 100%;
-    border: 1px solid black;
 }
 .landing-offer-grid img{
     height: 100%;
@@ -131,7 +147,8 @@ a:active, a:hover{
     justify-content: space-between;
 }
 .landing-browsing-history > div>div{
-    border: 1px solid black;
+    padding: auto;
+    margin: auto;
 }
 #landing-footer-login-div{
     margin-top: 35px;
