@@ -1,6 +1,13 @@
 import navbar2 from "../components/navbar2.js";
 document.getElementById("navbar2").innerHTML=navbar2();
 import fetchdata from "../components/fetchdata.js";
+import dropdown from "../components/dropdown.js"
+document.getElementById("dropDown").innerHTML=dropdown;
+import dropdown1 from "../components/dropdown1.js"
+document.getElementById("dropDown1").innerHTML=dropdown1;
+import dropdown2 from "../components/dropdown2.js"
+document.getElementById("dropDown2").innerHTML=dropdown2;
+
 
 let category=localStorage.getItem("category");
 let id=localStorage.getItem("showid")
@@ -189,11 +196,30 @@ function displaydata1(el){
     div.append(imgdiv, brand, title, div1,price,div2)
     document.getElementById("relateddiv1").append(div)
 }
+document.getElementById("mens").addEventListener("click",()=>{
+    localStorage.setItem("category","men")
+    location.href="./men.html"
+})
+
 document.getElementById("womens").addEventListener("click",()=>{
     localStorage.setItem("category","women")
     location.href="./women.html"
 })
-document.getElementById("mens").addEventListener("click",()=>{
-    localStorage.setItem("category","men")
-    location.href="./men.html"
+document.getElementById("mens").addEventListener("mouseover",()=>{
+    document.querySelector("#dropDown").style.display="flex";
+})
+document.getElementById("womens").addEventListener("mouseover",()=>{
+    document.querySelector("#dropDown1").style.display="flex";
+})
+document.getElementById("mens").addEventListener("mouseout",()=>{
+    document.querySelector("#dropDown").style.display="none";
+})
+document.getElementById("womens").addEventListener("mouseout",()=>{
+    document.querySelector("#dropDown1").style.display="none";
+})
+document.getElementById("kids").addEventListener("mouseover",()=>{
+    document.querySelector("#dropDown2").style.display="flex";
+})
+document.getElementById("kids").addEventListener("mouseout",()=>{
+    document.querySelector("#dropDown2").style.display="none";
 })
