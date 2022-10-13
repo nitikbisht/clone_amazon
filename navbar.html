@@ -5,209 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Amazon.in : amazon.com</title>
-    <style>
-        * {
-          box-sizing: border-box;
-        }
-        #completeNavbar{
-            display: flex;
-            flex-direction: column;
-            gap: 8px;
-        }
-        body{
-            background-color: rgba(0, 0, 0, 0.712);
-        }
-        #navbar{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-            background-color: black;
-            height:60px;
-            margin: -8px;
-        }
-        #logo{
-            width: 12%;
-        }
-        #address{
-            display: flex;
-            flex-direction: row;
-            width: 13%;
-            color: white;
-            
-        }
-        .location{
-            margin-top: 25px;
-            margin-right: 5px;
-        }
-        .locationText>  p{
-            font-size: small;
-            font-family: Arial, Helvetica, sans-serif;
-            color: lightgrey;
-        }
-        .locationText > h4{
-            margin: 0px;
-            margin-top: -14px;
-        }
-        #searchbar{
-            width: 44%;
-            display: flex;
-            flex-direction: row;
-            margin: auto;
-        }
-        #rest{
-            display: flex;
-            flex-direction: row;
-            width: 28%;
-            justify-content: space-between;
-            margin: auto;
-        }
-        #logo > a > img{
-            width: 80%;
-            margin: auto;
-            margin-left: 10px;
-            height: 60px;
-        }
-        #searchbar > select{
-            width: 9%;
-            border: none;
-            background-color: rgb(237, 235, 235);
-            color: rgba(9, 9, 9, 0.626);
-            border-radius: 5px 0 0 5px;
-            height: 40px;
-        }
-        #search{
-            width: 82%;
-            padding: 10px;
-            font-size: 17px;
-            border: none;
-            outline: none;
-            color: #000;
-            height: 40px;
-        }
-        #handleSubmit{
-            width: 8%;
-            padding: 7px 10px 10px 0;
-            color: #000;
-            font-size: 17px;
-            border: none;
-            border-radius: 0 4px 4px 0;
-            background-color: rgb(211, 158, 58);
-            height: 40px;
-        }
-        #handleSubmit > img{
-            width: 27px;
-            height: 27px;
-            margin: 0 0 4px 8px;
-        }
-        #handleSubmit:hover{
-            background-color: rgb(208, 143, 21);
-        }
-        .language > img{
-            width: 22px;
-            height: 17px;
-            margin-top: 20px;
-        }
-        .language > select{
-            width: 16px;
-            margin: auto;
-            color: rgb(117, 116, 116);
-            background-color: black;
-            margin-top: 8px;
-            border: none;
-        }
-        a{
-            text-decoration: none;
-        }
-        #signIn{
-            margin-bottom: 10px;
-        }
-        #signIn > p{
-            font-size: small;
-            font-family: Arial, Helvetica, sans-serif;
-            color: lightgrey;
-        }
-        #signIn > h4{
-            margin: 0px;
-            color: white;
-            margin-top: -14px;
-        }
-        .order{
-            margin-bottom: 10px;
-            margin-left: 10px;
-        }
-        .order > p{
-            font-size: small;
-            font-family: Arial, Helvetica, sans-serif;
-            color: lightgrey;
-        }
-        .order > h4{
-            margin: 0px;
-            color: white;
-            margin-top: -14px;
-        }
-        i{
-            color: white;
-        }
-        #cart{
-            display: flex;
-            flex-direction: row;
-            height: 60px;
-        }
-        #cart > h5{
-            color: white;
-            font-size: large;
-            margin-left: -10px;
-        }
-        #cart > img{
-            height: 55px;
-            width: 70px;
-        }
-        #miniNavbar{
-            display: flex;
-            flex-direction: row;
-            margin: 0 -8px 0 -8px;
-            background-color: rgba(4, 4, 20, 0.594);
-            height: 40px;
-        }
-        #leftSide{
-            display: flex;
-            width: 60%;
-            flex-direction: row;
-            justify-content: space-around;
-            height: 40px;
-            margin: auto;
-        }
-        #leftSide > a{
-            color: white;
-            font-size: medium;
-            margin-top: -6px;
-        }
-        #rightSide{
-            width: 33%;
-            margin: auto;
-            height: 40px;
-            /* border: 1px solid teal; */
-            margin-left: 20px;
-        }
-        #rightSide > a{
-            display: flex;
-            flex-direction: row;
-            justify-content: space-evenly;
-        }
-        #rightSide > a >p{
-            width: 85%;
-            color: rgba(245, 245, 245, 0.842);
-            font-size: larger;
-            font-weight: 500;
-            margin-top: 6px;
-            font-family: Arial, Helvetica, sans-serif;
-            
-        }
-        #rightSide > a >img{
-            width: 10%;
-            height: 30px;
-        }
-    </style>
+    <link rel="stylesheet" href="./navbar.css">
 </head>
 <body>
     <nav>
@@ -227,12 +25,39 @@
             </div>
             <div id="searchbar">
                 <select>
-                    <option value="default">All</option>
-                    <option>Mens wear</option>
-                    <option>Womens wear</option>
-                    <option>Kids wear</option>
-                    <option>Mobiles</option>
-                    <option>Laptops</option>
+                    <a href=""><option value="default">All</option></a>
+                    <a href=""><option>Alexa Skills</option></a>
+                    <a href=""><option>Amazon Devices</option></a>
+                    <a href=""><option>Amazon Fashion</option></a>
+                    <a href=""><option>Amazon Fresh</option></a>
+                    <a href=""><option>Amazon Pharmacy</option></a>
+                    <a href=""><option>Appliances</option></a>
+                    <a href=""><option>App & Games</option></a>
+                    <a href=""><option>Baby</option></a>
+                    <a href=""><option>Beauty</option></a>
+                    <a href=""><option>Books</option></a>
+                    <a href=""><option>Car & Motorbike</option></a>
+                    <a href=""><option>Clothing & Accessories</option></a>
+                    <a href=""><option>Computer & Accessories</option></a>
+                    <a href=""><option>Deals</option></a>
+                    <a href=""><option>Electronics</option></a>
+                    <a href=""><option>Furniture</option></a>
+                    <a href=""><option>Garden & Outdoors</option></a>
+                    <a href=""><option>Grocery & Personal Care</option></a>
+                    <a href=""><option>Home & Kitchen</option></a>
+                    <a href=""><option>Jewellery</option></a>
+                    <a href=""><option>Luggages & Bags</option></a>
+                    <a href=""><option>Luxury Beauty</option></a>
+                    <a href=""><option> Movies & Tv Shows</option></a>
+                    <a href=""><option>Music</option></a>
+                    <a href=""><option>Office Products</option></a>
+                    <a href=""><option>Prime Video</option></a>
+                    <a href=""><option>Shoes & HandBag</option></a>
+                    <a href=""><option>Software</option></a>
+                    <a href=""><option>Toys & Games</option></a>
+                    <a href=""><option>Suscribe & Save</option></a>
+                    <a href=""><option>Toys & Games</option></a>
+                    <a href=""><option>Watches</option></a>
                 </select>
                 <input id="search" type="search">
                 <button type="submit" id="handleSubmit" ><img src="https://www.1stopdesign.com/wp-content/uploads/2015/06/Search-Logos.png"></button>
@@ -250,17 +75,17 @@
                         <option>Tamil</option>
                     </select>
                 </div>
-                <a href="./index.html">
+                <a href="">
                 <div id="signIn">
                     <p>Hello, sign in</p>
                     <h4>Account & Lists</h4>
                 </div></a>
-                <a href="./index.html">
+                <a href="">
                 <div class="order">
                     <p>Returns</p>
                     <h4>& Orders</h4>
                 </div></a>
-                <a href="./index.html">
+                <a href="">
                 <div id="cart">
                     <img src ="https://lynaperez.vip/wp-content/uploads/2020/09/shop2_bl.png">
                     <h5>Cart</h5>
@@ -270,7 +95,7 @@
 
         <div id="miniNavbar">
             <div id="leftSide">
-                <a href=""><p><i class="fa-solid fa-bars"></i> All</p></a>
+                <a href=""><p id="openSidebar"><i class="fa-solid fa-bars"></i> All</p></a>
                 <a href=""><p>Sell</p></a>
                 <a href=""><p>Fresh</p></a>
                 <a href=""><p>Amazon Pay</p></a>
@@ -283,12 +108,53 @@
             </div>
             <div id="rightSide">
                 <a href="">
-                <img src="https://i2-prod.mirror.co.uk/incoming/article23386978.ece/ALTERNATES/s615b/1_Amazon-Logo.jpg" alt="logo">
+                <img src="https://sallythebarkingduck.com/img/amazon_icon_logo.png" alt="logo">
                 <p>Shopping made Easy | Download the app</p></a>
+            </div>
+        </div>
+        <div id="sideBar">
+            
+            <a href="">
+            <div id="heading">
+                <img src="https://www.pngkey.com/png/full/202-2024792_profile-icon-png.png">
+                <p>Hello, sign in</p>
+                <button id="crossBtn">
+                    <img src="https://www.tellingstories.co.uk/new-site/ts-content/uploads/2020/04/T_ImageRights.jpg">
+                </button>
+            </div></a>
+            <div id="content">
+                <ul>Digital Content & Devices</ul>
+                    <li><a href="">Amazon Music</a></li>
+                    <li><a href="">Kindle E-readers & Books</a></li>
+                    <li><a href="">Amazon Appstore</a></li>
+                    <hr>
+                <ul>Shop By Department</ul>
+                    <li><a href="">Electronics</a></li>
+                    <li><a href="">Computers</a></li>
+                    <li><a href="">Smart Home</a></li>
+                    <li><a href="">Arts & Crafts</a></li>
+                    <hr>
+                <ul>Programs & Features</ul>
+                    <li><a href="">Gifts Cards</a></li>
+                    <li>#FoundItOnAmazon</li>
+                    <li><a href="">Amazon Live</a></li>
+                    <li><a href="">International Shopping</a></li>
+                    <hr>
+                <ul>Help & Settings</ul>
+                    <li>Your Account</li>
+                    <li>English</li>
+                    <li>United States</li>
+                    <li>Customer Service</li>
+                    <li><a href="">Sign in</a></li>
+                    <br><br>
+                    <br><br>
         </div>
         </div>
     </div>
     </nav>
+
+
 </body>
 </html>
+<script src="./navbar.js"></script>
 <script src="https://kit.fontawesome.com/d822390a31.js" crossorigin="anonymous"></script>
