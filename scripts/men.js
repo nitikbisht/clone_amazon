@@ -24,14 +24,7 @@ function appenddata(data){
         }
     })
 }
-document.getElementById("womens").addEventListener("click",()=>{
-    localStorage.setItem("category","women")
-    location.href="./women.html"
-})
-document.getElementById("mens").addEventListener("click",()=>{
-    localStorage.setItem("category","men")
-    location.href="./men.html"
-})
+
 function displaydata(el){
     let div=document.createElement("div")
     div.addEventListener("click",()=>{
@@ -75,6 +68,18 @@ function displaydata(el){
 }
 
 
+
+///////////////////
+////////////////////
+
+document.getElementById("womens").addEventListener("click",()=>{
+    localStorage.setItem("category","women")
+    location.href="./women.html"
+})
+document.getElementById("mens").addEventListener("click",()=>{
+    localStorage.setItem("category","men")
+    location.href="./men.html"
+})
 document.getElementById("mens").addEventListener("mouseover",()=>{
     document.querySelector("#dropDown").style.display="flex";
 })
@@ -92,4 +97,22 @@ document.getElementById("kids").addEventListener("mouseover",()=>{
 })
 document.getElementById("kids").addEventListener("mouseout",()=>{
     document.querySelector("#dropDown2").style.display="none";
+})
+document.getElementById("dropDown2").addEventListener("mouseover",()=>{
+    document.querySelector("#dropDown2").style.display="flex";
+})
+document.getElementById("dropDown2").addEventListener("mouseout",()=>{
+    document.querySelector("#dropDown2").style.display="none";
+})
+document.getElementById("dropDown").addEventListener("mouseover",()=>{
+    document.querySelector("#dropDown").style.display="flex";
+})
+document.getElementById("dropDown").addEventListener("mouseout",()=>{
+    document.querySelector("#dropDown").style.display="none";
+})
+document.getElementById("dropDown1").addEventListener("mouseover",()=>{
+    document.querySelector("#dropDown1").style.display="flex";
+})
+document.getElementById("dropDown1").addEventListener("mouseout",()=>{
+    document.querySelector("#dropDown1").style.display="none";
 })

@@ -37,7 +37,7 @@ function dropdown2(){
         <p>ValuePacks</p>
     </div>
     <div>
-        <P style="color:#f25511 ; margin-bottom:6px; ;"><strong>Footwear</strong></P> <br>
+        <P style="color:#f25511 ; margin-bottom:6px; ;"><strong>Footwear</strong></P>
         <p>Flats</p>
         <p>Casual Shoes</p>
         <p>Heels</p>

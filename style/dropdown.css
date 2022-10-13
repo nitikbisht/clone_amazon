@@ -35,6 +35,7 @@
     position: absolute;
     right: 240px;
     top: 75px;
+    margin-top: -17px;
   }
   
   #dropDown1 {
@@ -72,6 +73,7 @@
     position: absolute;
     right: 240px;
     top: 75px;
+    margin-top: -17px;
   }
   #dropDown2 {
     display: flex;
@@ -99,9 +101,22 @@
     margin: 5px;
     color: #282c3f;
 }
+#dropDown2 p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#dropDown p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+#dropDown1 p:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
 #dropDown2{
     display: none;
     position: absolute;
     right: 240px;
-    top: 75px;
+    top: 70px;
+    margin-top: -15px;
   } 
