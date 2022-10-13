@@ -89,6 +89,8 @@
     width: 35%;
     height: 100%;
     border: 1px solid rgb(192, 192, 192);
+    padding: 10px;
+    
 }
 #pricediv>div:nth-child(2) *{
     text-align: center;
@@ -125,4 +127,24 @@
 }
 #pricediv>div:nth-child(3) img{
     width: 55px;
+}
+#cartdiv>div>button:first-child{
+    width: 100%;
+    background-color:#FFD814;
+    border:1px solid #FCD200 ;
+    height: 35px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+#cartdiv>div{
+    margin-top: 35px;
+    border-bottom: 1px solid #7b7b7b;
+}
+#cartdiv>div>button:last-child{
+    width: 100%;
+    background-color:#FFA41C;
+    border:1px solid #FF8F00 ;
+    height: 35px;
+    border-radius: 20px;
+    margin-bottom: 10px;
 }

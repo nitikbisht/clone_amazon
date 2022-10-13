@@ -23,9 +23,45 @@ function display(data){
     // console.log(data.description)
     document.getElementById("adddescription").append(p)
     displaydetail(data)
+    displaybtn(data)
+}
+function displaybtn(el){
+    let div=document.createElement("div")
+    let op = document.createElement("h1")
+    op.innerText=`₹${el.discPrice}`
+    op.style.color="#B12704"
+    let p=document.createElement("h3")
+    p.innerText="FREE delivery Saturday, 22 October on first order. Details"
+    p.style.color="#252525"
+    let p1=document.createElement("h3")
+    p1.innerText="Or fastest delivery Tomorrow, October 19. Order within 26 mins. Details"
+    p1.style.color="#252525"
+    let p2=document.createElement("h2")
+    p2.innerText="In stock."
+    p2.style.color="green"
+    let p3=document.createElement("h4")
+    p3.innerText="Shows what is inside. Item often ships in manufacturer container to reduce packaging. If this is a gift, consider shipping to a different address."
+    p3.style.color="#252525"
+    var div1=document.createElement("div")
+    div1.style.display="flex"
+    div1.style.alignItems="center"
+    let p4=document.createElement("p")
+    p4.innerText="Quantity:"
+    p4.style.color="#252525"
+    let type=document.createElement("input")
+    type.style.width="50px"
+    type.style.height="20px"
+    type.type="number"
+    type.defaultValue=1
+    div1.append(p4,type)
+    let btn1=document.createElement("button")
+    btn1.innerText="Add To Cart"
+    let btn2=document.createElement("button")
+    btn2.innerText="Buy Now"
+    div.append(btn1,btn2)
+    document.getElementById("cartdiv").append(op,p,p1,p2,p3,div1,div)
 }
 function displaydetail(el){
-    let div=document.createElement("div")
     let div1=document.createElement("div")
     let head=document.createElement("h1")
     head.innerText=`${el.brand} ${el.title}`
