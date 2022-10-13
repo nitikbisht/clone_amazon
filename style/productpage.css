@@ -136,6 +136,15 @@
     border-radius: 20px;
     margin-bottom: 10px;
 }
+#cartdiv>div>button:first-child:hover{
+   cursor: pointer;
+    background-color:#eccc29;
+}
+#cartdiv>div>button:last-child:hover{
+    cursor: pointer;
+     background-color:rgb(255, 182, 45);
+     border:1px solid rgb(255, 182, 45) ;
+ }
 #cartdiv>div{
     margin-top: 35px;
     border-bottom: 1px solid #7b7b7b;
