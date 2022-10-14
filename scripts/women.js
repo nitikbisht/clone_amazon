@@ -16,14 +16,60 @@ let getfun=async()=>{
     var data=await fetchdata;
     console.log(data)
     appenddata(data);
+    filterDiscoun(data)
 }
 getfun();
 function appenddata(data){
+    //document.getElementById("sort").onchange(handlesort(data))
+    handlesort(data)
+}
+function getinfo(data){
+    document.getElementById("showresult").innerText=""
     data.map((el)=>{
         if(el.category==="women's clothing"){
             displaydata(el);
         }
     })
+}
+function handlesort(data){
+    var nameorder=document.getElementById("sort").value
+    if(nameorder==="ascending"){
+        console.log("asc")
+      data.sort(function(a,b){
+        if(a.discPrice>b.discPrice){
+          return 1
+        }
+        if(a.discPrice<b.discPrice){
+          return -1
+        }
+        return 0
+      })
+    }
+    if(nameorder==="descending"){
+        console.log("dsc")
+      data.sort(function(a,b){
+        if(a.discPrice>b.discPrice){
+          return -1
+        }
+        if(a.discPrice<b.discPrice){
+          return 1
+        }
+        return 0
+      })
+    }
+    if(nameorder==="rating"){
+        console.log("rating")
+      data.sort(function(a,b){
+        if(a.rating.rate>b.rating.rate){
+          return -1
+        }
+        if(a.rating.rate<b.rating.rate){
+          return 1
+        }
+        return 0
+      })
+    }
+    getinfo(data)
 }
 
 function displaydata(el){
@@ -68,6 +114,112 @@ function displaydata(el){
             document.getElementById("showresult").append(div);
 }
 //////////////////
+function filterDiscoun(data){
+
+    ///************DISCOUNT FILTER********//
+    function filterDiscount(discount) {
+        //console.log(discount,data);
+      var brandList = data.filter(function (elem) {
+        return elem.discount >= discount;
+      });
+       document.getElementById("showresult").innerText=""
+       //console.log(brandList);
+       appenddata(brandList)
+      
+     }
+    var checkbox = document.querySelectorAll(".discount-input");
+    checkbox.forEach(function (e) {
+        e.addEventListener("change", function () {
+            if (this.checked) {
+                //console.log(e.value)
+                var discount = e.value;
+                filterDiscount(discount);
+            } else {
+                //console.log("reset discount");
+                appenddata(data)
+            }
+        });
+    });
+    ///////***color filter**************///
+    function colorFilter(value) {
+        var brandList = data.filter(function (elem) {
+            return elem.color == value;
+        });
+        //empty product container to before appending the filter products
+
+        document.getElementById("showresult").innerText=""
+       //console.log(brandList);
+       appenddata(brandList)
+    }
+    var checkbox = document.querySelectorAll(".color-input");
+    checkbox.forEach(function (e) {
+        e.addEventListener("change", function () {
+            if (this.checked) {
+                var value = e.value;
+                //console.log(data);
+                colorFilter(value);
+
+            } else {
+                appenddata(data)
+            }
+        });
+    });
+    //////////************price******** */////////////
+    var checkbox = document.querySelectorAll(".price-input");
+checkbox.forEach(function (e) {
+  e.addEventListener("change", function () {
+    if (this.checked) {
+      var max = e.value;
+      var min = e.name;
+      //console.log(max,min);
+      filterRate(min, max);
+      
+    } else {
+        appenddata(data)
+    }
+  });
+});
+
+function filterRate(min, max) {
+  var brandList = data.filter(function (elem) {
+    return elem.discPrice >= min && elem.discPrice <= max;
+  });
+  document.getElementById("showresult").innerText=""
+  //console.log(brandList);
+  appenddata(brandList)
+}
+/////***************brand filter**************///////////
+var checkbox = document.querySelectorAll(".brand-input");
+checkbox.forEach(function (e) {
+  e.addEventListener("change", function () {
+    if (this.checked) {
+      var value = e.value;
+      if(value==""){
+        checkBox("Amazon Brand - Symactive")  
+        checkBox("Amazon Brand - Symbol")
+        } 
+        else{
+            checkBox(value);
+        }
+    }
+     
+    else {
+        appenddata(data)
+    }
+  });
+});
+function checkBox(value) {
+    //console.log('value');
+    document.getElementById("showresult").innerText=""
+    
+  var brandList = data.filter(function (elem) {
+    return elem.brand == value;
+  });
+       console.log(brandList);
+       appenddata(brandList)
+}
+
+}
 /////////////////////
 // ///////////////////
 document.getElementById("mens").addEventListener("click",()=>{

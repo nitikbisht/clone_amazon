@@ -15,7 +15,12 @@
     <div id="dropDown1" style="display:none"></div>
     <div id="dropDown2" style="display:none"></div>
     <div id="sortdiv">
-        <button>sort</button>
+        <select  id="sort">
+            <option value="">New and Bestselling</option>
+            <option value="ascending">Price: Low to High</option>
+            <option value="descending">Price: High to Low</option>
+            <option value="rating">Avg. Customers Rating</option>
+          </select>
     </div>
     <div id="mainview">
         <div id="filter">
@@ -33,15 +38,15 @@
             <div class="filter-child">
                 <span>BRAND</span>
                 <div>
-                    <input class="brand-input" type="checkbox" id="roadster" name="checkbox" value="Roadster">
+                    <input class="brand-input" type="checkbox" id="roadster" name="checkbox" value="Max">
                     <label for="">Max </label>
                 </div>
                 <div>
-                    <input class="brand-input" type="checkbox" value="WROGN">
+                    <input class="brand-input" type="checkbox" value="Van Heusen Woman">
                     <label for="">Van Heusen Woman </label>
                 </div>
                 <div>
-                    <input class="brand-input" type="checkbox" value="Puma">
+                    <input class="brand-input" type="checkbox" value="Amazon Brand - Symbol">
                     <label for="">Amazon Brand </label>
                 </div>
                 <div>
@@ -56,13 +61,18 @@
             <div id="price" class="filter-child">
                 <span>PRICE</span>
                 <div>
-                    <input class="price-input" type="checkbox" name="174" value="2378">
-                    <label for="">Rs. 174 to Rs. 2378 </label>
+                    <input class="price-input" type="checkbox" name="100" value="199">
+                    <label for="">Rs. 100 to Rs. 199 </label>
                 </div>
                 <div>
-                    <input class="price-input" type="checkbox" name="2378" value="4582">
-                    <label for="">Rs. 2378 to Rs. 4582 </label>
+                    <input class="price-input" type="checkbox" name="200" value="300">
+                    <label for="">Rs. 200 to Rs. 300 </label>
                 </div>
+                <div>
+                    <input class="price-input" type="checkbox" name="301" value="400">
+                    <label for="">Rs. 301 to Rs. 400 </label>
+                </div>
+                
             </div>
             <div class="filter-child">
                 <span>COLOR</span>
@@ -79,7 +89,7 @@
                     <label for=""><span id="product-blue"></span>Blue </label>
                 </div>
                 <div>
-                    <input class="color-input" type="checkbox" value="Maroon">
+                    <input class="color-input" type="checkbox" value="maroon">
                     <label for=""><span id="product-maroon"></span>Maroon </label>
                 </div>
                 
