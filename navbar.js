@@ -22,8 +22,12 @@ document.getElementById("handleSubmit").addEventListener("click",()=>{
    else if(input === "kids"){
     location.href = "";
    }
+   else if(input === "products"){
+    location.href = "";
+   }
    else{
     // write path of home page
     location.href = "";
    }
+   document.getElementById("search").value = "";
 });
