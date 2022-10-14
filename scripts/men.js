@@ -84,7 +84,7 @@ function filterDiscoun(data){
         return elem.discount >= discount;
       });
        document.getElementById("showresult").innerText=""
-       console.log(brandList);
+       //console.log(brandList);
        appenddata(brandList)
       
      }
@@ -96,7 +96,7 @@ function filterDiscoun(data){
                 var discount = e.value;
                 filterDiscount(discount);
             } else {
-                console.log("reset discount");
+                //console.log("reset discount");
                 appenddata(data)
             }
         });
@@ -109,7 +109,7 @@ function filterDiscoun(data){
         //empty product container to before appending the filter products
 
         document.getElementById("showresult").innerText=""
-       console.log(brandList);
+       //console.log(brandList);
        appenddata(brandList)
     }
     var checkbox = document.querySelectorAll(".color-input");
@@ -125,18 +125,43 @@ function filterDiscoun(data){
             }
         });
     });
+    //////////************price******** */////////////
+    var checkbox = document.querySelectorAll(".price-input");
+checkbox.forEach(function (e) {
+  e.addEventListener("change", function () {
+    if (this.checked) {
+      var max = e.value;
+      var min = e.name;
+      //console.log(max,min);
+      filterRate(min, max);
+      
+    } else {
+        appenddata(data)
+    }
+  });
+});
+
+function filterRate(min, max) {
+  var brandList = data.filter(function (elem) {
+    return elem.discPrice >= min && elem.discPrice <= max;
+  });
+  document.getElementById("showresult").innerText=""
+  //console.log(brandList);
+  appenddata(brandList)
+}
 /////***************brand filter**************///////////
 var checkbox = document.querySelectorAll(".brand-input");
 checkbox.forEach(function (e) {
   e.addEventListener("change", function () {
     if (this.checked) {
-        document.getElementById("showresult").innerText=""
       var value = e.value;
-      checkBox(value);
       if(value==""){
         checkBox("Amazon Brand - Symactive")  
         checkBox("Amazon Brand - Symbol")
-    } 
+        } 
+        else{
+            checkBox(value);
+        }
     }
      
     else {
@@ -144,17 +169,38 @@ checkbox.forEach(function (e) {
     }
   });
 });
-
 function checkBox(value) {
+    //console.log('value');
+    document.getElementById("showresult").innerText=""
+    
   var brandList = data.filter(function (elem) {
     return elem.brand == value;
   });
-  
        console.log(brandList);
        appenddata(brandList)
 }
-
-    
+////////**********category*********** //////////
+var checkbox = document.querySelectorAll(".cat-input");
+checkbox.forEach(function (e) {
+  e.addEventListener("change", function () {
+    if (this.checked) {
+        document.getElementById("showresult").innerText=""
+      var value = e.value;
+      checkBox1(value);
+    }
+     
+    else {
+        appenddata(data)
+    }
+  });
+});
+function checkBox1(value) {
+  var brandList = data.filter(function (elem) {
+    return elem.subcategory == value;
+  });
+       //console.log(brandList);
+       appenddata(brandList)
+}
 }
  
 
