@@ -11,13 +11,15 @@ document.getElementById("dropDown2").innerHTML=dropdown2;
 
 localStorage.setItem("showid","")
 let category=localStorage.getItem("category");
-let getfun=async()=>{
+async function getfun(){
     var data=await fetchdata;
-    console.log(data)
+    //console.log(data)
     appenddata(data);
+    filterDiscoun(data)
 }
 getfun();
 function appenddata(data){
+    document.getElementById("showresult").innerText=""
     data.map((el)=>{
         if(el.category==="men's clothing"){
             displaydata(el);
@@ -66,10 +68,99 @@ function displaydata(el){
             div.append(imgdiv,brand,title,div1,div2)
             document.getElementById("showresult").append(div);
 }
+/////////////////
+////////////////////////
 
 
+//console.log(data);
 
-///////////////////
+
+function filterDiscoun(data){
+
+    ///************DISCOUNT FILTER********//
+    function filterDiscount(discount) {
+        //console.log(discount,data);
+      var brandList = data.filter(function (elem) {
+        return elem.discount >= discount;
+      });
+       document.getElementById("showresult").innerText=""
+       console.log(brandList);
+       appenddata(brandList)
+      
+     }
+    var checkbox = document.querySelectorAll(".discount-input");
+    checkbox.forEach(function (e) {
+        e.addEventListener("change", function () {
+            if (this.checked) {
+                //console.log(e.value)
+                var discount = e.value;
+                filterDiscount(discount);
+            } else {
+                console.log("reset discount");
+                appenddata(data)
+            }
+        });
+    });
+    ///////***color filter**************///
+    function colorFilter(value) {
+        var brandList = data.filter(function (elem) {
+            return elem.color == value;
+        });
+        //empty product container to before appending the filter products
+
+        document.getElementById("showresult").innerText=""
+       console.log(brandList);
+       appenddata(brandList)
+    }
+    var checkbox = document.querySelectorAll(".color-input");
+    checkbox.forEach(function (e) {
+        e.addEventListener("change", function () {
+            if (this.checked) {
+                var value = e.value;
+                //console.log(data);
+                colorFilter(value);
+
+            } else {
+                appenddata(data)
+            }
+        });
+    });
+/////***************brand filter**************///////////
+var checkbox = document.querySelectorAll(".brand-input");
+checkbox.forEach(function (e) {
+  e.addEventListener("change", function () {
+    if (this.checked) {
+        document.getElementById("showresult").innerText=""
+      var value = e.value;
+      checkBox(value);
+      if(value==""){
+        checkBox("Amazon Brand - Symactive")  
+        checkBox("Amazon Brand - Symbol")
+    } 
+    }
+     
+    else {
+        appenddata(data)
+    }
+  });
+});
+
+function checkBox(value) {
+  var brandList = data.filter(function (elem) {
+    return elem.brand == value;
+  });
+  
+       console.log(brandList);
+       appenddata(brandList)
+}
+
+    
+}
+ 
+
+
+/////***************color filter**************///////////
+
 ////////////////////
 
 document.getElementById("womens").addEventListener("click",()=>{

@@ -60,6 +60,8 @@ function displaybtn(el){
     type.style.height="20px"
     type.type="number"
     type.defaultValue=1
+    type.min=1
+    type.max=10
     div1.append(p4,type)
     let btn1=document.createElement("button")
     btn1.innerText="Add To Cart"
