@@ -19,6 +19,10 @@ async function getfun(){
 }
 getfun();
 function appenddata(data){
+    //document.getElementById("sort").onchange(handlesort(data))
+    handlesort(data)
+}
+function getinfo(data){
     document.getElementById("showresult").innerText=""
     data.map((el)=>{
         if(el.category==="men's clothing"){
@@ -26,7 +30,46 @@ function appenddata(data){
         }
     })
 }
-
+function handlesort(data){
+    var nameorder=document.getElementById("sort").value
+    if(nameorder==="ascending"){
+        console.log("asc")
+      data.sort(function(a,b){
+        if(a.discPrice>b.discPrice){
+          return 1
+        }
+        if(a.discPrice<b.discPrice){
+          return -1
+        }
+        return 0
+      })
+    }
+    if(nameorder==="descending"){
+        console.log("dsc")
+      data.sort(function(a,b){
+        if(a.discPrice>b.discPrice){
+          return -1
+        }
+        if(a.discPrice<b.discPrice){
+          return 1
+        }
+        return 0
+      })
+    }
+    if(nameorder==="rating"){
+        console.log("rating")
+      data.sort(function(a,b){
+        if(a.rating.rate>b.rating.rate){
+          return -1
+        }
+        if(a.rating.rate<b.rating.rate){
+          return 1
+        }
+        return 0
+      })
+    }
+    getinfo(data)
+}
 function displaydata(el){
     let div=document.createElement("div")
     div.addEventListener("click",()=>{
