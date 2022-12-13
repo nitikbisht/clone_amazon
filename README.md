@@ -10,7 +10,7 @@
 
 ## **PROJECT LINK**
 
-[GITHUB](https://github.com/Agramom/Amazon_constweek2)
+[DEPLOY](https://grand-marzipan-0bdba6.netlify.app/)
 
 ### **LANDING PAGE :**
 
